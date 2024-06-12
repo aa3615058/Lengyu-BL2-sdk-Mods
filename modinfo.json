@@ -1,25 +1,57 @@
 {
   "defaults": {
-    "authors": "lengyu",
-    "source": "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods",
-    "supports": ["BL2"],
-    "license": "MIT"
+	"authors": "lengyu",
+	"source": "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods",
+	"supports": ["BL2"],
+	"license": "MIT"
   },
   "mods": [
-    {
-      "name": "Weapon Quick Switcher",
-      "description": [
-        "Adds a keybind option to the game that allows you to switch to the last used weapon quickly. By default the key is binded to Q."
-      ],
-      "tagline": [
-        "Press Q to quickly switch to the last used weapon."
-      ],
-      "types": ["Utility"],
-      "latest": "1.1",
-      "versions": {
-        "1.1": ""
-      },
+	{
+	  "name": "Lengyu TP Device",
+	  "description": [
+		"Allows you to teleport yourself anywhere you marked. \n1.Press NUM0 to mark the location. \n2.Press NUMdot to teleport.\n3.Press NUM1-3 to switch within 3 slots.\n\nIt doesn't work in the map Digistruct Peak."
+	  ],
+	  "tagline": [
+		"Allows you to teleport yourself anywhere you marked."
+	  ],
+	  "types": ["Utility"],
+	  "latest": "1.1",
+	  "versions": {
+		"1.1": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuTPDevice/LengyuTPDevice.zip"
+	  },
+	  "requirements": {
+		"UserFeedback": ">=1.6"
+	  }
+	},
+	  {
+	  "name": "Weapon Quick Switcher",
+	  "description": [
+		"Adds a keybind option to the game that allows you to switch to the last used weapon quickly. By default the key is binded to Q."
+	  ],
+	  "tagline": [
+		"Press Q to quickly switch to the last used weapon."
+	  ],
+	  "types": ["Utility"],
+	  "latest": "1.1",
+	  "versions": {
+		"1.1": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/WeaponQuickSwitcher/WeaponQuickSwitcher.zip"
+	  },
 	  "requirements": {}
-    }
+	},
+	  {
+	  "name": "Simple Chinese Fix",
+	  "description": [
+		"Fix several inexplicably invalid Simple Chinese Language localization words.\nLyuda = 鲁达\nMinds Eye Skill = 灵犀之眼"
+	  ],
+	  "tagline": [
+		"Fix several Simple Chinese Language localization words."
+	  ],
+	  "types": ["Utility"],
+	  "latest": "1.0",
+	  "versions": {
+		"1.0": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/SimpleChineseFix/SimpleChineseFix.zip"
+	  },
+	  "requirements": {}
+	}
   ]
 }
