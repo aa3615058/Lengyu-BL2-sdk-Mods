@@ -15,3 +15,11 @@ A collection of mods of Borderlands2 developed by Lengyu based on https://github
 ### [Simple Chinese Fix](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/SimpleChineseFix/SimpleChineseFix.zip)
 
  - Fix localization words "鲁达" and "灵犀之眼".
+
+### [Shop Reseter](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ShopReseter/ShopReseter.zip)
+
+- Allows you to press F9 to reset any shop you last used.
+
+### [Death Trap Memory Program](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip)
+
+- Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack. The Memory is persistent.
