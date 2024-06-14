@@ -58,6 +58,12 @@ class LengyuTPDevice(SDKMod):
             self.Index = 1
         elif name == "change to the slot 3":
             self.Index = 2
+
+    def Enable(self) -> None:
+        super().Enable()
+
+    def Disable(self) -> None:
+        super().Disable()
     
     def DisplayFeedback(self, message, time=2.0) -> None:
         if self.showTips:
@@ -68,13 +74,14 @@ class LengyuTPDevice(SDKMod):
             duration = time * self.gameSpeed
             HUDMovie.ClearTrainingText()
             HUDMovie.AddTrainingText(
-                message, "TPDevice", duration, (), "", False, 0, playerController.PlayerReplicationInfo, True
+                message, "TP Device", duration, (), "", False, 0, playerController.PlayerReplicationInfo, True
             )
 
     def SaveLocation(self) -> None:
         if self.Index not in range(0,len(self.Marks)):
             return
         pc = unrealsdk.GetEngine().GamePlayers[0].Actor
+        
         if pc.WorldInfo.GetMapName() is None or pc.WorldInfo.GetMapName() == "TestingZone_P":
             return
         
@@ -88,22 +95,28 @@ class LengyuTPDevice(SDKMod):
             return
         
         pc = unrealsdk.GetEngine().GamePlayers[0].Actor
+       
         if pc.WorldInfo.GetMapName() is None or pc.WorldInfo.GetMapName() == "TestingZone_P":
             return
         
-        if not pc.IsPrimaryPlayer():
+        if self.AmIClientPlayer():
             self.DisplayFeedback("You are not allowed to teleport in a game which is not created by yourself", 3.0)
             return
         
+        # 检查地图一致
         if pc.WorldInfo.GetMapName() != self.Marks[self.Index].MapName:
             self.DisplayFeedback("Error! The saved location of the <font color=\"#4DFFFF\">slot {}</font> is not in current map.".format(self.Index+1), 5.0)
             return
         
+        # 传送！
         pc.Pawn.Location.X = self.Marks[self.Index].X
         pc.Pawn.Location.Y = self.Marks[self.Index].Y
         pc.Pawn.Location.Z = self.Marks[self.Index].Z
         pc.Rotation.Pitch = self.Marks[self.Index].Pitch
         pc.Rotation.Roll = self.Marks[self.Index].Roll
         pc.Rotation.Yaw = self.Marks[self.Index].Yaw
+    
+    def AmIClientPlayer(self) -> bool:
+        return unrealsdk.GetEngine().GetCurrentWorldInfo().NetMode == 3
 
 RegisterMod(LengyuTPDevice())

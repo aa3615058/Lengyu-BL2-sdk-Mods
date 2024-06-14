@@ -23,7 +23,7 @@ class ShopReseter(SDKMod):
         if name == "reset shop":
             if self.Shop and self.Shop.ObjectFlags.A == 0x4100000:
                 pc = unrealsdk.GetEngine().GamePlayers[0].Actor
-                if pc.IsPrimaryPlayer():
+                if self.AmIClientPlayer():
                     pc.ServerPlayerResetShop(self.Shop)
 
     @Hook("WillowGame.VendingMachineExGFxMovie.extInitVendingMachine","shopReorder")
@@ -33,5 +33,8 @@ class ShopReseter(SDKMod):
                     params: unrealsdk.FStruct):
         self.Shop = caller.VM
         return True
+    
+    def AmIClientPlayer(self) -> bool:
+        return unrealsdk.GetEngine().GetCurrentWorldInfo().NetMode == 3
 
 unrealsdk.RegisterMod(ShopReseter())

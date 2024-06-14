@@ -77,9 +77,9 @@
 		  "Adds a keybind that allows Death Trap to memorize your shield."
 		],
 		"types": ["Utility"],
-		"latest": "1.1",
+		"latest": "1.2",
 		"versions": {
-		  "1.1": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip"
+		  "1.2": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip"
 		},
 		"requirements": {}
 	}

@@ -7,7 +7,7 @@ from ..ModMenu import EnabledSaveType, SDKMod, Hook, Game, ModTypes, Keybind
         
 class DeathTrapMemory(SDKMod):
     Name = "Death Trap Memory Program"
-    Version = "1.1"
+    Version = "1.2"
     Author = "Lengyu"
     Description = "Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack.\nThe Memory is persistent.\nTo erase the memory, you could remove your shield and press the keybind again."
     ModTypes = ModTypes.Utility
@@ -35,9 +35,8 @@ class DeathTrapMemory(SDKMod):
             else:
                 self.IsMechromancer = True
 
-            if self.IsMechromancer:
-                Pawn = pc.Pawn
-                Shield = Pawn.EquippedItems[0]
+            if self.IsMechromancer and not self.AmIClientPlayer():
+                Shield = pc.Pawn.EquippedItems[0]
                 if Shield:
                     if Shield.GetUniqueID():
                         self.ShieldID = Shield.GetUniqueID()
@@ -46,10 +45,10 @@ class DeathTrapMemory(SDKMod):
                 else:
                     self.ShieldID = 0
                     self.ShieldName = ""
-                    self.DisplayFeedback("Death Trap has erased the memory.",time=4.0)
+                    self.DisplayFeedback("Death Trap has erased the memory.",time=4.0)              
 
-    @Hook("WillowGame.DeathtrapActionSkill.TryToShareShields","MemorizeShield")
-    def MemorizeShield(self, 
+    @Hook("WillowGame.DeathtrapActionSkill.TryToShareShields","CopyMemorizedShield")
+    def CopyMemorizedShield(self, 
                     caller: unrealsdk.UObject, 
                     function: unrealsdk.UFunction, 
                     params: unrealsdk.FStruct):
@@ -62,6 +61,9 @@ class DeathTrapMemory(SDKMod):
         
         backpackInventory = playerPawn.InvManager.Backpack
         if backpackInventory is None:
+            return True
+        
+        if self.AmIClientPlayer():
             return True
         
         if playerPawn.EquippedItems[0].getUniqueID() == self.ShieldID:
@@ -81,7 +83,7 @@ class DeathTrapMemory(SDKMod):
             return False
         else:
             return True
-    
+
     @Hook("WillowGame.WillowSaveGameManager.SaveGame","SaveDTShield")
     def SaveDTShield(self,
                     caller: unrealsdk.UObject,
@@ -92,6 +94,9 @@ class DeathTrapMemory(SDKMod):
             return True
         
         if not self.IsMechromancer:
+            return True
+
+        if self.AmIClientPlayer():
             return True
         
         try:
@@ -138,6 +143,9 @@ class DeathTrapMemory(SDKMod):
         finally:
             return True
     
+    def AmIClientPlayer(self) -> bool:
+        return unrealsdk.GetEngine().GetCurrentWorldInfo().NetMode == 3
+
     def DisplayFeedback(self, message, time=2.0) -> None:
         if self.ShowTips:
             playerController = unrealsdk.GetEngine().GamePlayers[0].Actor
