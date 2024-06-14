@@ -4,7 +4,7 @@ from ..ModMenu import EnabledSaveType, SDKMod, Hook, Game, ModTypes
 class SimpleChineseFix(SDKMod):
     Name = "Simple Chinese Fix"
     Version = "1.0"
-    Author = "lengyu"
+    Author = "Lengyu"
     Description = "Fix several inexplicably invalid Simple Chinese Language localization words.\nLyuda = 鲁达\nMinds Eye Skill = 灵犀之眼"
     ModTypes = ModTypes.Utility
     SaveEnabledState = EnabledSaveType.LoadWithSettings

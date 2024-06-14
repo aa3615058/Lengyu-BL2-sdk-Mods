@@ -1,6 +1,6 @@
 {
   "defaults": {
-	"authors": "lengyu",
+	"authors": "Lengyu",
 	"source": "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods",
 	"supports": ["BL2"],
 	"license": "MIT"
@@ -23,7 +23,7 @@
 		"UserFeedback": ">=1.6"
 	  }
 	},
-	  {
+	{
 	  "name": "Weapon Quick Switcher",
 	  "description": [
 		"Adds a keybind option to the game that allows you to switch to the last used weapon quickly. By default the key is binded to Q."
@@ -38,7 +38,7 @@
 	  },
 	  "requirements": {}
 	},
-	  {
+	{
 	  "name": "Simple Chinese Fix",
 	  "description": [
 		"Fix several inexplicably invalid Simple Chinese Language localization words.\nLyuda = 鲁达\nMinds Eye Skill = 灵犀之眼"
@@ -52,6 +52,36 @@
 		"1.0": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/SimpleChineseFix/SimpleChineseFix.zip"
 	  },
 	  "requirements": {}
+	},
+	{
+		"name": "Shop Reseter",
+		"description": [
+		  "Adds a keybind option to the game that allows you to reset any shop you last used immediately. By default the key is binded to F9."
+		],
+		"tagline": [
+		  "Adds a keybind that allows you to reset shop."
+		],
+		"types": ["Utility"],
+		"latest": "1.0",
+		"versions": {
+		  "1.0": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ShopReseter/ShopReseter.zip"
+		},
+		"requirements": {}
+	},
+	{
+		"name": "Death Trap Memory Program",
+		"description": [
+		  "Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack.\nThe Memory is persistent.\nTo erase the memory, you could remove your shield and press the keybind again.."
+		],
+		"tagline": [
+		  "Adds a keybind that allows Death Trap to memorize your shield."
+		],
+		"types": ["Utility"],
+		"latest": "1.1",
+		"versions": {
+		  "1.1": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip"
+		},
+		"requirements": {}
 	}
   ]
 }

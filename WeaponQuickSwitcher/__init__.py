@@ -5,7 +5,7 @@ from ..ModMenu import EnabledSaveType, SDKMod, Hook, Game, ModTypes, Keybind
 class WeaponQuickSwitcher(SDKMod):
     Name = "Weapon Quick Switcher"
     Version = "1.1"
-    Author = "lengyu"
+    Author = "Lengyu"
     Description = "Adds a keybind option to the game that allows you to switch to the last used weapon quickly. By default the key is binded to Q."
     ModTypes = ModTypes.Utility
     SaveEnabledState = EnabledSaveType.LoadWithSettings
