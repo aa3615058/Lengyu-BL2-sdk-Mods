@@ -23,3 +23,7 @@ A collection of mods of Borderlands2 developed by Lengyu based on https://github
 ### [Death Trap Memory Program](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip)
 
 - Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack. The Memory is persistent.
+
+### [Loot Collector](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.zip)
+
+ - Allows you to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level.Allows you to delete all white and green loot and delete all loot.
