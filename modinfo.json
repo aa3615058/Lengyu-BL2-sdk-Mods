@@ -86,7 +86,7 @@
 	{
 		"name": "Loot Collector",
 		"description": [
-		  "Help you collect loot conveniently. \n1.Press / to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level. \n2.Press - (on keypad) to delete all white and green loot. \n3.Press Delete to delete all loot. (CAUTION)\nMission Items and ECHO will be excluded.\n<img src=\"https://github.com/aa3615058/Lengyu-BL2-sdk-Mods/blob/master/LootCollector/LootCollector.jpg\"/>"
+		  "Help you collect loot conveniently. \n1.Press / to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level. \n2.Press - (on keypad) to delete all white and green loot. \n3.Press Delete to delete all loot. (CAUTION)\nMission Items and ECHO will be excluded.\n<img src=\"https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.jpg\" width=\"640\" height=\"360\"/>"
 		],
 		"tagline": [
 		  "Allows you to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level."
