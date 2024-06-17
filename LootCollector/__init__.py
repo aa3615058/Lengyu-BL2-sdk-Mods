@@ -55,6 +55,7 @@ class LootCollector(SDKMod):
                 for LootA in Loot:
                     LootA.Location = (px+p*cos(2*pi/n*j), py+p*sin(2*pi/n*j), pz)
                     LootA.AdjustPickupPhysicsAndCollisionForBeingDropped()
+                    LootA.InitializePickupForRBPhysics()
                     j += 1
 
         if keybind.Name == "Delete All Loot":
