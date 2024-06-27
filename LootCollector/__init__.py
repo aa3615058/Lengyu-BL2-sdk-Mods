@@ -13,7 +13,8 @@ class LootCollector(SDKMod):
                        "1.Press / to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level. \n" \
                        "2.Press - (on keypad) to delete all white and green loot. \n" \
                        "3.Press Delete to delete all loot. (CAUTION)\n" \
-                       "Mission Items and ECHO will be excluded.\n" 
+                       "Mission Items and ECHO will be excluded.\n" \
+                       "In multiplayer games, it will work only when you are the host player."
     Types = unrealsdk.ModTypes.Utility
     SupportedGames = Game.BL2
 

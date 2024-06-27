@@ -6,7 +6,7 @@ class ShopReseter(SDKMod):
     Name = "Shop Reseter"
     Version = "1.0"
     Author = "Lengyu"
-    Description = "Adds a keybind option to the game that allows you to reset any shop you last used immediately. By default the key is binded to F9."
+    Description = "Adds a keybind option to the game that allows you to reset any shop you last used immediately. Please leave the shop before you press the keybind. By default the key is binded to F9. \nIn multiplayer games, it will work only when you are the host player."
     ModTypes = ModTypes.Utility
     SaveEnabledState = EnabledSaveType.LoadWithSettings
     SupportedGames = Game.BL2
@@ -23,7 +23,7 @@ class ShopReseter(SDKMod):
         if name == "reset shop":
             if self.Shop and self.Shop.ObjectFlags.A == 0x4100000:
                 pc = unrealsdk.GetEngine().GamePlayers[0].Actor
-                if self.AmIClientPlayer():
+                if not self.AmIClientPlayer():
                     pc.ServerPlayerResetShop(self.Shop)
 
     @Hook("WillowGame.VendingMachineExGFxMovie.extInitVendingMachine","shopReorder")
