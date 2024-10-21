@@ -14,6 +14,7 @@
 	  "tagline": [
 		"Allows you to teleport yourself anywhere you marked."
 	  ],
+	  "supports": ["BL2", "TPS"],
 	  "types": ["Utility"],
 	  "latest": "1.1",
 	  "versions": {
@@ -31,6 +32,7 @@
 	  "tagline": [
 		"Press Q to quickly switch to the last used weapon."
 	  ],
+	  "supports": ["BL2", "TPS"],
 	  "types": ["Utility"],
 	  "latest": "1.1",
 	  "versions": {
@@ -91,6 +93,7 @@
 		"tagline": [
 		  "Allows you to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level."
 		],
+		"supports": ["BL2", "TPS"],
 		"types": ["Utility"],
 		"latest": "1.3",
 		"versions": {
@@ -106,6 +109,7 @@
 		"tagline": [
 		  "Adds a keybind that allows you to throw your current weapon and then pick up it immediately."
 		],
+		"supports": ["BL2", "TPS"],
 		"types": ["Utility"],
 		"latest": "1.0",
 		"versions": {
