@@ -6,10 +6,10 @@ class WeaponQuickSwitcher(SDKMod):
     Name = "Weapon Quick Switcher"
     Version = "1.1"
     Author = "Lengyu"
-    Description = "Adds a keybind option to the game that allows you to switch to the last used weapon quickly. By default the key is binded to Q."
+    Description = "Adds a keybind option to the game that allows you to switch to the last used weapon like in Counter-Strike and many other FPS games. By default the key is binded to Q."
     ModTypes = ModTypes.Utility
     SaveEnabledState = EnabledSaveType.LoadWithSettings
-    SupportedGames = Game.BL2
+    SupportedGames = Game.BL2 | Game.TPS
 
     def __init__(self):
         self.PreviousWeapon = None

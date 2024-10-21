@@ -16,7 +16,7 @@ class LootCollector(SDKMod):
                        "Mission items ,unpickupable items and ECHOs will be excluded.\n" \
                        "In multiplayer games, it will work only when you are the host player."
     Types = unrealsdk.ModTypes.Utility
-    SupportedGames = Game.BL2
+    SupportedGames = Game.BL2 | Game.TPS
 
     Keybinds: List[KeybindManager.Keybind] = [
         KeybindManager.Keybind("Collect Loot", Key="Slash"),

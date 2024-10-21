@@ -18,7 +18,7 @@ class LengyuTPDevice(SDKMod):
     Author: str = "Lengyu"
     Description: str = "Allows you to teleport yourself anywhere you marked. \n1.Press NUM0 to mark the location. \n2.Press NUMdot to teleport.\n3.Press NUM1-3 to switch within 3 slots.\n\nIt doesn't work in the map Digistruct Peak."
     Types: ModTypes = ModTypes.Utility
-    SupportedGames = Game.BL2
+    SupportedGames = Game.BL2 | Game.TPS
     SaveEnabledState: EnabledSaveType = EnabledSaveType.LoadWithSettings
 
     def __init__(self):
