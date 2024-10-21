@@ -27,3 +27,7 @@ A collection of mods of Borderlands2 developed by Lengyu based on https://github
 ### [Loot Collector](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.zip)
 
  - Allows you to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level.Allows you to delete all white and green loot and delete all loot.
+
+### [Throw Weapon Then Pickup](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ThrowWeaponThenPickup/ThrowWeaponThenPickup.zip)
+
+- Allows you to press H to throw your current weapon and then pick up it immediately.

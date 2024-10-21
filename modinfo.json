@@ -97,6 +97,21 @@
 		  "1.3": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.zip"
 		},
 		"requirements": {}
+	},
+	{
+		"name": "Throw Weapon Then Pickup",
+		"description": [
+		  "Adds a keybind option to the game that allows you to throw your current weapon and then pick up it immediately. \nThe benefit of doing this is: \n1.Switch weapon immediately. 2.Reloading magazine immediately.\nBy default the key is binded to H."
+		],
+		"tagline": [
+		  "Adds a keybind that allows you to throw your current weapon and then pick up it immediately."
+		],
+		"types": ["Utility"],
+		"latest": "1.0",
+		"versions": {
+		  "1.0": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ThrowWeaponThenPickup/ThrowWeaponThenPickup.zip"
+		},
+		"requirements": {}
 	}
   ]
 }
