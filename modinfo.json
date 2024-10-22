@@ -9,7 +9,7 @@
 	{
 	  "name": "Lengyu TP Device",
 	  "description": [
-		"Allows you to teleport yourself anywhere you marked. \n1.Press NUM0 to mark the location. \n2.Press NUMdot to teleport.\n3.Press NUM1-3 to switch within 3 slots.\n\nIt doesn't work in the map Digistruct Peak."
+		"Allows you to teleport yourself anywhere you marked. \n1.Press NUMPad0 to mark the location. \n2.Press NUMPadDot to teleport.\n3.Press NUMPad1-3 to switch within 3 slots.\n4.Press NUMPad4-6 to teleport other player to you.\n5.Open the option to print teleport console command when you mark location.\nIn co-op game it only works for the host player.\nIt doesn't work in the map Digistruct Peak."
 	  ],
 	  "tagline": [
 		"Allows you to teleport yourself anywhere you marked."
