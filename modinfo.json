@@ -73,15 +73,15 @@
 	{
 		"name": "Death Trap Memory Program",
 		"description": [
-		  "Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack.\nThe Memory is persistent.\nTo erase the memory, you could remove your shield and press the keybind again.."
+		  "Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack.\nThe Memory is persistent.\nTo erase the memory, you could remove your shield and press the keybind again.\nIt works in multiplayer game when both the server player and the client player have enabled this mod."
 		],
 		"tagline": [
-		  "Adds a keybind that allows Death Trap to memorize your shield."
+		  "Allows Death Trap to use a designated shield in Gaige's backpack. It works in multiplayer game."
 		],
 		"types": ["Utility"],
-		"latest": "1.2",
+		"latest": "1.4",
 		"versions": {
-		  "1.2": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip"
+		  "1.4": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip"
 		},
 		"requirements": {}
 	},

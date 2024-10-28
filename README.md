@@ -7,10 +7,12 @@ A collection of mods of Borderlands2 developed by Lengyu based on https://github
 ### [LengyuTPDevice](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuTPDevice/LengyuTPDevice.zip)
 
  - Allows you to teleport yourself anywhere you marked. 
+ - Allows you to teleport other player to you.
+ - Allows you to print teleport command to python-sdk.log.
 
 ### [Weapon Quick Switcher](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/WeaponQuickSwitcher/WeaponQuickSwitcher.zip)
 
-- Allows you to press Q to switch to the last used weapon like in Counter-Strike and many other FPS games.
+- Allows you to press Q to switch to your last used weapon like in Counter-Strike and many other FPS games.
 
 ### [Simple Chinese Fix](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/SimpleChineseFix/SimpleChineseFix.zip)
 
@@ -22,7 +24,9 @@ A collection of mods of Borderlands2 developed by Lengyu based on https://github
 
 ### [Death Trap Memory Program](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip)
 
-- Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack. The Memory is persistent.
+- Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack. 
+- The Memory is persistent.
+- It works in multiplayer games.
 
 ### [Loot Collector](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.zip)
 
