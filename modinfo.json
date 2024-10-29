@@ -83,7 +83,9 @@
 		"versions": {
 		  "1.4": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip"
 		},
-		"requirements": {}
+		"requirements": {
+			"UserFeedback": ">=1.6"
+		}
 	},
 	{
 		"name": "Loot Collector",
