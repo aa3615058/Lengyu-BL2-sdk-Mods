@@ -4,7 +4,7 @@ A collection of mods of Borderlands2 developed by Lengyu based on https://github
 
 ## Content
 
-### [LengyuTPDevice](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuTPDevice/LengyuTPDevice.zip)
+### [Lengyu TP Device](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuTPDevice/LengyuTPDevice.zip)
 
  - Allows you to teleport yourself anywhere you marked. 
  - Allows you to teleport other player to you.
@@ -35,3 +35,7 @@ A collection of mods of Borderlands2 developed by Lengyu based on https://github
 ### [Throw Weapon Then Pickup](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ThrowWeaponThenPickup/ThrowWeaponThenPickup.zip)
 
 - Allows you to press H to throw your current weapon and then pick up it immediately.
+
+### [Lengyu Copy Device](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuCopyDevice/LengyuCopyDevice.zip)
+
+- Allows you to spend money to copy the selected equipment.

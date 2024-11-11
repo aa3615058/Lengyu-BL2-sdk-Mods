@@ -118,6 +118,21 @@
 		  "1.0": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ThrowWeaponThenPickup/ThrowWeaponThenPickup.zip"
 		},
 		"requirements": {}
-	}
+	},
+	{
+		"name": "Lengyu Copy Device",
+		"description": [
+		  "Allows you to spend money to copy the selected equipment.\nPress the keybind \"UseSecondary\" on the Equipment page or Backpack page to throw and copy the selected equipment. It costs the selling price of the equipment.\nIt works in multiplayer game when both the server player and the client player have enabled this mod."
+		],
+		"tagline": [
+		  "Allows you to spend money to copy the selected equipment."
+		],
+		"supports": ["BL2", "TPS"],
+		"types": ["Utility"],
+		"latest": "1.0",
+		"versions": {
+		  "1.0": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuCopyDevice/LengyuCopyDevice.zip"
+		}
+	  }
   ]
 }
