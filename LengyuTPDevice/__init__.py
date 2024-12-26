@@ -1,6 +1,6 @@
 from typing import List
 import unrealsdk
-from ..ModMenu import EnabledSaveType, SDKMod, ModTypes, Keybind, OptionManager, Options, Game, RegisterMod, Hook
+from ..ModMenu import EnabledSaveType, SDKMod, ModTypes, Keybind, OptionManager, Options, Game, RegisterMod, Hook, ServerMethod
 
 class LocationInfo:
     def __init__(self, MapName, X, Y, Z, Pitch, Roll, Yaw):
@@ -14,9 +14,9 @@ class LocationInfo:
 
 class LengyuTPDevice(SDKMod):
     Name: str = "lengyu TP Device"
-    Version: str = "1.2"
+    Version: str = "1.3"
     Author: str = "Lengyu"
-    Description: str = "Allows you to teleport yourself anywhere you marked. \n1.Press NUM0 to mark the location. \n2.Press NUMDot to teleport.\n3.Press NUM1-3 to switch within 3 slots.\n4.Press NUM4-6 to teleport other player to you.\n5.Open the option to print teleport console command when you mark location.\nIn co-op game it only works for the host player.\nIt doesn't work in the map Digistruct Peak."
+    Description: str = "Allows you to teleport yourself anywhere you marked. \n1.Press NUM0 to mark the location. \n2.Press NUMDot to teleport.\n3.Press NUM1-3 to switch within 3 slots.\n4.Press NUM4-6 to teleport other player to you.\n5.Open the option to print teleport console command when you mark location.\nIn mutiplayer games the client player can only teleport himself.\nIt doesn't work in the map Digistruct Peak."
     Types: ModTypes = ModTypes.Utility
     SupportedGames = Game.BL2 | Game.TPS
     SaveEnabledState: EnabledSaveType = EnabledSaveType.LoadWithSettings
@@ -34,7 +34,7 @@ class LengyuTPDevice(SDKMod):
             Keybind(self.InputNames[4], "NumPadThree"),
             Keybind(self.InputNames[5], "NumPadFour"),
             Keybind(self.InputNames[6], "NumPadFive"),
-            Keybind(self.InputNames[7], "NumPadSix"),            
+            Keybind(self.InputNames[7], "NumPadSix"),
         ]
         
         self.ShowTipsOption = OptionManager.Options.Boolean(self.OptionNames[0], "When it is enable, you will see tips when you press the keybinds.", True)
@@ -62,11 +62,11 @@ class LengyuTPDevice(SDKMod):
             return
 
         if name == self.InputNames[5]:
-            self.TeleportOtherPlayer(2)
+            self.TeleportOtherPlayerToMe(2)
         elif name == self.InputNames[6]:
-            self.TeleportOtherPlayer(3)
+            self.TeleportOtherPlayerToMe(3)
         elif name == self.InputNames[7]:
-            self.TeleportOtherPlayer(4)
+            self.TeleportOtherPlayerToMe(4)
         
         if name == self.InputNames[0]:
             self.SaveLocation()
@@ -94,7 +94,7 @@ class LengyuTPDevice(SDKMod):
             duration = time
             HUDMovie.ClearTrainingText()
             HUDMovie.AddTrainingText(
-                message, "TP Device", duration, (), "", False, 0, playerController.PlayerReplicationInfo, True
+                message, self.Name, duration, (), "", False, 0, playerController.PlayerReplicationInfo, True
             )
 
     def SaveLocation(self) -> None:
@@ -113,28 +113,44 @@ class LengyuTPDevice(SDKMod):
         
         pc = unrealsdk.GetEngine().GamePlayers[0].Actor
 
-        if self.AmIClientPlayer():
-            self.DisplayFeedback("You are not allowed to teleport in a game which is not created by yourself", 3.0)
-            return
+        #if self.AmIClientPlayer():
+        #    self.DisplayFeedback("You are not allowed to teleport in a game which is not created by yourself", 3.0)                                                                            
+        #    return
         
         if pc.WorldInfo.GetMapName() != self.SavedLocaiton[self.Index].MapName:
             self.DisplayFeedback("Error! The saved location of <font color=\"#4DFFFF\">slot {}</font> is not in current map.".format(self.Index+1), 5.0)
             return
         
         # TP!
-        pc.Pawn.Location.X = self.SavedLocaiton[self.Index].X
-        pc.Pawn.Location.Y = self.SavedLocaiton[self.Index].Y
-        pc.Pawn.Location.Z = self.SavedLocaiton[self.Index].Z
-        pc.Rotation.Pitch = self.SavedLocaiton[self.Index].Pitch
-        pc.Rotation.Roll = self.SavedLocaiton[self.Index].Roll
-        pc.Rotation.Yaw = self.SavedLocaiton[self.Index].Yaw
+        loc = self.SavedLocaiton[self.Index]
+        if self.AmIClientPlayer():
+            self.ServerTeleport(self.GetMyClientPlayerID(), loc.X, loc.Y, loc.Z, loc.Pitch, loc.Roll, loc.Yaw)
+        else:
+            self.Teleport(pc, loc.X, loc.Y, loc.Z, loc.Pitch, loc.Roll, loc.Yaw)
         
+    @ServerMethod
+    def ServerTeleport(self, PlayerID: int, x: int, y: int, z: int, pitch: int, roll: int, yaw: int):
+        for PRI in unrealsdk.GetEngine().GetCurrentWorldInfo().GRI.PRIArray:
+            if PRI.Owner.PlayerReplicationInfo.PlayerID == PlayerID:
+                pc = PRI.Owner
+                self.Teleport(pc, x, y, z, pitch, roll, yaw)
+                return
+        return
+
+    def Teleport(self, pc: unrealsdk.UObject, x: int, y: int, z: int, pitch: int, roll: int, yaw: int):
+        pc.Pawn.Location.X = x
+        pc.Pawn.Location.Y = y
+        pc.Pawn.Location.Z = z
+        pc.Rotation.Pitch = pitch
+        pc.Rotation.Roll = roll
+        pc.Rotation.Yaw = yaw
+
     def PrintConsoleCmd(self, x, y, z):
         if self.PrintConsoleCmdOption.CurrentValue:
             Cmd = f"set WillowPlayerPawn Location (x={int(x)},y={int(y)},z={int(z)})"
             unrealsdk.Log(f"{self.Name}: {Cmd}")
-    
-    def TeleportOtherPlayer(self, playerIndex: int):
+
+    def TeleportOtherPlayerToMe(self, playerIndex: int):
         if playerIndex < 2 or playerIndex > 4:
             return
         if self.AmIClientPlayer():
@@ -149,6 +165,11 @@ class LengyuTPDevice(SDKMod):
             Otherpc.Pawn.Location.X = pc.Pawn.Location.X + 100
             Otherpc.Pawn.Location.Y = pc.Pawn.Location.Y + 100
             Otherpc.Pawn.Location.Z = pc.Pawn.Location.Z
+    def GetPlayerController(self):
+        return unrealsdk.GetEngine().GamePlayers[0].Actor
+    
+    def GetMyClientPlayerID(self):
+        return self.GetPlayerController().PlayerReplicationInfo.PlayerID
     
     def AmIClientPlayer(self) -> bool:
         return unrealsdk.GetEngine().GetCurrentWorldInfo().NetMode == 3

@@ -9,16 +9,16 @@
 	{
 	  "name": "Lengyu TP Device",
 	  "description": [
-		"Allows you to teleport yourself anywhere you marked. \n1.Press NUMPad0 to mark the location. \n2.Press NUMPadDot to teleport.\n3.Press NUMPad1-3 to switch within 3 slots.\n4.Press NUMPad4-6 to teleport other player to you.\n5.Open the option to print teleport console command when you mark location.\nIn co-op game it only works for the host player.\nIt doesn't work in the map Digistruct Peak."
+		"Allows you to teleport yourself anywhere you marked. \n1.Press NUMPad0 to mark the location. \n2.Press NUMPadDot to teleport.\n3.Press NUMPad1-3 to switch within 3 slots.\n4.Press NUMPad4-6 to teleport other player to you.\n5.Open the option to print teleport console command when you mark location.\nIt works in mutiplayer games.\nIt doesn't work in the map Digistruct Peak."
 	  ],
 	  "tagline": [
 		"Allows you to teleport yourself anywhere you marked."
 	  ],
 	  "supports": ["BL2", "TPS"],
 	  "types": ["Utility"],
-	  "latest": "1.2",
+	  "latest": "1.3",
 	  "versions": {
-		"1.2": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuTPDevice/LengyuTPDevice.zip"
+		"1.3": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuTPDevice/LengyuTPDevice.zip"
 	  },
 	  "requirements": {
 		"UserFeedback": ">=1.6"
@@ -58,15 +58,16 @@
 	{
 		"name": "Shop Reseter",
 		"description": [
-		  "Adds a keybind option to the game that allows you to reset any shop you last used immediately. By default the key is binded to F9."
+		  "Adds a keybind option to the game that allows you to reset any shop you last used immediately. By default the key is binded to F9. \nIt works in mutiplayer games."
 		],
 		"tagline": [
 		  "Adds a keybind that allows you to reset shop."
 		],
 		"types": ["Utility"],
-		"latest": "1.0",
+		"supports": ["BL2", "TPS"],
+		"latest": "1.1",
 		"versions": {
-		  "1.0": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ShopReseter/ShopReseter.zip"
+		  "1.1": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/ShopReseter/ShopReseter.zip"
 		},
 		"requirements": {}
 	},
@@ -90,16 +91,16 @@
 	{
 		"name": "Loot Collector",
 		"description": [
-		  "Help you collect loot conveniently. \n1.Press / to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level. \n2.Press - (on keypad) to delete all white and green loot. \n3.Press Delete to delete all loot. (CAUTION)\nMission Items and ECHO will be excluded.\n<img src=\"https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.jpg\" width=\"640\" height=\"360\"/>"
+		  "Help you collect loot conveniently. \n1.Press / to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level. \n2.Press - (on keypad) to delete all white and green loot. \n3.Press Delete to delete all loot. (CAUTION)\nMission Items and ECHO will be excluded.\nIt works in mutiplayer games.\n<img src=\"https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.jpg\" width=\"640\" height=\"360\"/>"
 		],
 		"tagline": [
 		  "Allows you to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level."
 		],
 		"supports": ["BL2", "TPS"],
 		"types": ["Utility"],
-		"latest": "1.3",
+		"latest": "1.4",
 		"versions": {
-		  "1.3": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.zip"
+		  "1.4": "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.zip"
 		},
 		"requirements": {}
 	},
