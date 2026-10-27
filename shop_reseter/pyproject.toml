@@ -1,0 +1,19 @@
+[project]
+name = "Shop Reseter"
+version = "1.1"
+authors = [{ name = "Lengyu" }]
+description = """
+Instantly reset the shop you last used! Press the keybind (default F9) after leaving the vending machine interface. No player may be interacting with the vending machine when the key is pressed.
+Works in multiplayer, the host player does not need this mod.
+In TPS multiplayer, only the host player can use it.
+"""
+
+[project.urls]
+Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
+
+[tool.sdkmod]
+license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+name = "Shop Reseter"
+coop_support = "ClientSide"
+download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/shop_reseter/shop_reseter.sdkmod"
+supported_games = ["BL2", "TPS"]

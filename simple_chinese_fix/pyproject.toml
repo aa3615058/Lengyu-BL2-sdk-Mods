@@ -1,0 +1,19 @@
+[project]
+name = "Simple Chinese Fix"
+version = "1.0"
+authors = [{ name = "Lengyu" }]
+description = """
+Fixes a few Tianmiao Chinese localization entries that mysteriously stopped working in version 1.8.5. Not needed for players using the official translation.
+Lyuda = 鲁达
+Minds Eye Skill = 灵犀之眼
+"""
+
+[project.urls]
+Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
+
+[tool.sdkmod]
+license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+name = "Simple Chinese Fix"
+coop_support = "ClientSide"
+download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/simple_chinese_fix/simple_chinese_fix.sdkmod"
+supported_games = ["BL2"]

@@ -1,0 +1,20 @@
+[project]
+name = "Death Trap Memory"
+version = "1.4"
+authors = [{ name = "Lengyu" }]
+description = """
+Death Trap now has a memory expansion program installed. Press 6 to copy the data of your equipped shield into the memory program. If the shield slot is empty, the memory is cleared.
+The next time you summon Death Trap, if that shield is in your backpack, Death Trap will copy it, otherwise it behaves like the vanilla game.
+The memory is permanent and stored per save game.
+In multiplayer, if either the host or the client player does not have this mod, the vanilla behavior is used.
+"""
+
+[project.urls]
+Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
+
+[tool.sdkmod]
+license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+name = "Death Trap Memory"
+coop_support = "RequiresAllPlayers"
+download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/death_trap_memory/death_trap_memory.sdkmod"
+supported_games = ["BL2"]

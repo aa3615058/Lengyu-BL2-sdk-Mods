@@ -1,0 +1,25 @@
+[project]
+name = "Lengyu TP Device"
+version = "1.4"
+authors = [{ name = "Lengyu" }]
+description = """
+Now you can teleport manually!
+1. Press numpad 0 to mark the current location.
+2. Press numpad dot to teleport to the marked location.
+3. Supports 3 slots, press numpad 1, 2, 3 to select one.
+4. You can teleport yourself next to another player, press numpad 4, 5, 6.
+5. Optionally prints the teleport console command to python-sdk.log while marking the location.
+
+Works in multiplayer.
+Cannot be used in the Digistruct Peak map.
+"""
+
+[project.urls]
+Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
+
+[tool.sdkmod]
+license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+name = "Lengyu TP Device"
+coop_support = "RequiresAllPlayers"
+download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/lengyu_tp_device/lengyu_tp_device.sdkmod"
+supported_games = ["BL2", "TPS"]

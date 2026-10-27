@@ -1,0 +1,17 @@
+[project]
+name = "Fill Up Ammo"
+version = "1.1"
+authors = [{ name = "Lengyu" }]
+description = """
+Refill all of your ammo at the ammo vending machine with a single keybind. Every ammo type can be toggled separately in the mod options. If you don't have enough money it buys as much as it can.
+"""
+
+[project.urls]
+Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
+
+[tool.sdkmod]
+license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+name = "Fill Up Ammo"
+coop_support = "RequiresAllPlayers"
+download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/fillup_ammo/fillup_ammo.sdkmod"
+supported_games = ["BL2", "TPS"]

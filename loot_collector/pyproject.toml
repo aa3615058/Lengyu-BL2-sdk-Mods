@@ -1,0 +1,21 @@
+[project]
+name = "Loot Collector"
+version = "1.4"
+authors = [{ name = "Lengyu" }]
+description = """
+1. Adds a keybind (default /) that teleports every loot on the map to the player and arranges them in a circle.
+2. Adds a keybind (default numpad minus) that deletes all white and green loot on the map.
+3. Adds a keybind (default Delete) that deletes all loot on the map. Use with caution.
+Mission items, unpickupable items and ECHOs are all excluded.
+In multiplayer games, non-host players can only use the collect loot function.
+"""
+
+[project.urls]
+Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
+
+[tool.sdkmod]
+license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+name = "Loot Collector"
+coop_support = "RequiresAllPlayers"
+download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/loot_collector/loot_collector.sdkmod"
+supported_games = ["BL2", "TPS"]
