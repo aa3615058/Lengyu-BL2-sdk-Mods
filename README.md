@@ -1,6 +1,6 @@
 # Lengyu-BL2-sdk-Mods
 
-A collection of Borderlands 2 mods developed by Lengyu based on [PythonSDK](https://github.com/bl-sdk/PythonSDK).
+A collection of Borderlands 2 mods developed by Lengyu based on [willow-sdk](https://github.com/bl-sdk/willow2-mod-manager).
 
 Every mod is distributed as a `.sdkmod` package: drop it into your `sdk_mods` folder and enable it in the Mods menu.
 
