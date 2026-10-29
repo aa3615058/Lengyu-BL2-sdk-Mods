@@ -1,5 +1,5 @@
 [project]
-name = "Death Trap Memory"
+name = "death_trap_memory"
 version = "1.4"
 authors = [{ name = "Lengyu" }]
 description = """
@@ -13,7 +13,7 @@ In multiplayer, if either the host or the client player does not have this mod, 
 Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
 
 [tool.sdkmod]
-license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+license = {name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
 name = "Death Trap Memory"
 coop_support = "RequiresAllPlayers"
 download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/death_trap_memory/death_trap_memory.sdkmod"

@@ -1,5 +1,5 @@
 [project]
-name = "Loot Collector"
+name = "loot_collector"
 version = "1.4"
 authors = [{ name = "Lengyu" }]
 description = """
@@ -14,7 +14,7 @@ In multiplayer games, non-host players can only use the collect loot function.
 Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
 
 [tool.sdkmod]
-license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+license = {name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
 name = "Loot Collector"
 coop_support = "RequiresAllPlayers"
 download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/loot_collector/loot_collector.sdkmod"

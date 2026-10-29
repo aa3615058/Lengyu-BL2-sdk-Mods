@@ -49,7 +49,7 @@ Every mod is distributed as a `.sdkmod` package: drop it into your `sdk_mods` fo
 - Every mission can be toggled in the mod options.
 - About Sand Hawk: the reward of "I Know It When I See It" is changed to the Sand Hawk, the mission becomes repeatable, and "Don't Copy That Floppy" no longer requires completing it first.
 
-### [Previous Weapon Switcher](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/previous_weapon_switcher/previous_weapon_switcher.sdkmod)
+### [Weapon Switcher Q](https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/weapon_switcher_q/weapon_switcher_q.sdkmod)
 
 - Press Q to switch back to your last used weapon, like in Counter-Strike and many other FPS games.
 

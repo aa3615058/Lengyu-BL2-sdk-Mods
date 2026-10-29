@@ -1,5 +1,5 @@
 [project]
-name = "Throw Weapon Then Pickup"
+name = "throw_weapon_then_pickup"
 version = "1.0"
 authors = [{ name = "Lengyu" }]
 description = """
@@ -12,7 +12,7 @@ Adds a keybind (default H) that throws your current weapon and then picks it bac
 Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
 
 [tool.sdkmod]
-license = { name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+license = { name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
 name = "Throw Weapon Then Pickup"
 coop_support = "ClientSide"
 download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/throw_weapon_then_pickup/throw_weapon_then_pickup.sdkmod"

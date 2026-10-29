@@ -1,5 +1,5 @@
 [project]
-name = "Simple Chinese Fix"
+name = "simple_chinese_fix"
 version = "1.0"
 authors = [{ name = "Lengyu" }]
 description = """
@@ -12,7 +12,7 @@ Minds Eye Skill = 灵犀之眼
 Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
 
 [tool.sdkmod]
-license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+license = {name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
 name = "Simple Chinese Fix"
 coop_support = "ClientSide"
 download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/simple_chinese_fix/simple_chinese_fix.sdkmod"

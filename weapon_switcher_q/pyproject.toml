@@ -1,0 +1,17 @@
+[project]
+name = "weapon_switcher_q"
+version = "1.2"
+authors = [{ name = "Lengyu" }]
+description = """
+Adds a configurable keybind (default `Q`) that equips your last used weapon - the quick-switch feature found in most FPS games. 
+"""
+
+[project.urls]
+Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
+
+[tool.sdkmod]
+license = {name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
+name = "Weapon Switcher Q"
+coop_support = "ClientSide"
+download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/weapon_switcher_q/weapon_switcher_q.sdkmod"
+supported_games = ["BL2", "TPS"]

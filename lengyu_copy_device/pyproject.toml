@@ -1,11 +1,11 @@
 [project]
-name = "Lengyu Copy Device"
+name = "lengyu_copy_device"
 version = "1.2"
 authors = [{ name = "Lengyu" }]
 description = """
 Now you can copy equipment!
-Press the Interact key on the Equipment page or Backpack page to drop and copy the selected equipment. It costs money equal to the selling price of the equipment.
-Gamepad players: press Left Trigger (LT) to copy, Y keeps the original drop function.
+Press the "Secondary Use" key on the Equipment page or Backpack page to drop and copy the selected equipment. It costs money equal to the selling price of the equipment.
+Gamepad players: press LT to copy.
 Works in multiplayer, requires both the host player and the client player to install and enable this mod.
 """
 
@@ -13,7 +13,7 @@ Works in multiplayer, requires both the host player and the client player to ins
 Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
 
 [tool.sdkmod]
-license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+license = {name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
 name = "Lengyu Copy Device"
 coop_support = "RequiresAllPlayers"
 download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/lengyu_copy_device/lengyu_copy_device.sdkmod"

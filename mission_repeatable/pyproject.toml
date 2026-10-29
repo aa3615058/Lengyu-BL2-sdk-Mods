@@ -1,9 +1,9 @@
 [project]
-name = "Mission Repeatable"
+name = "mission_repeatable"
 version = "1.4"
 authors = [{ name = "Lengyu" }]
 description = """
-Makes the side missions that reward the following gear repeatable: Fibber, Pimpernel, Swordsplosion, Kitten, Heartbreaker, Rubi, Lady Fist, Amigo Sincero, Hail, Creamer, Evolve Varkid, Chere-amie, Orc, Sand Hawk. Love Thumper and Treasure of the Sands are supported as well.
+Makes the side missions that reward the following gear repeatable: Fibber, Pimpernel, Swordsplosion, Kitten, Heartbreaker, Rubi, Lady Fist, Amigo Sincero, Hail, Creamer, Chere-amie, Orc, Love Thumper, and Sand Hawk. Treasure of the Sands and Creature Slaughter: Round 2 are supported as well.
 Every mission can be toggled in the mod options.
 About Sand Hawk: Washburne Refinery, C3n50r807, I Know It When I See It - the mission reward is changed to the Sand Hawk, the mission becomes repeatable, and Don't Copy That Floppy no longer requires completing this mission first.
 """
@@ -12,7 +12,7 @@ About Sand Hawk: Washburne Refinery, C3n50r807, I Know It When I See It - the mi
 Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
 
 [tool.sdkmod]
-license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+license = {name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
 name = "Mission Repeatable"
 coop_support = "HostOnly"
 download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/mission_repeatable/mission_repeatable.sdkmod"

@@ -1,5 +1,5 @@
 [project]
-name = "Shop Reseter"
+name = "shop_reseter"
 version = "1.1"
 authors = [{ name = "Lengyu" }]
 description = """
@@ -12,7 +12,7 @@ In TPS multiplayer, only the host player can use it.
 Homepage = "https://github.com/aa3615058/Lengyu-BL2-sdk-Mods"
 
 [tool.sdkmod]
-license = {name = "GPL3", url = "https://choosealicense.com/licenses/gpl-3.0/" }
+license = {name = "MIT", url = "https://choosealicense.com/licenses/mit/" }
 name = "Shop Reseter"
 coop_support = "ClientSide"
 download = "https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/shop_reseter/shop_reseter.sdkmod"
